@@ -17,13 +17,16 @@
             <li><a href="#/comments">comments</a></li>
         </ul>
     </div>
+</body>
+</html>
+          </div>
 </nav>
 <section class="container">
     <article data-route="home" class="row">
         <div class="span12">
             <div class="hero-unit">
                 <h1>Project Review</h1>
-                <p>Click on <a href="#/users">users</a> to add yourself as a reviewer and <a href="#comments">comments</a> to add notes. <br> Review these projects:</br>
+                <p>Click on <a href="#/users">users</a> to login and <a href="#comments">comments</a> to add notes. <br> Review these projects:</br>
                 <table class="table table-striped" style="max-width: 600px">
                     <thead>
                     <tr>
@@ -116,7 +119,7 @@
             <fieldset>
                 <legend>add user</legend>
                 <div class="control-group">
-                    <label>name: <input type="text" name="name" value="user1" class="required" /></label>
+                    <label>name: <input type="text" name="name" value="" class="required" /></label>
                 </div>
                 <div class="control-group">
                     <label>email: <input type="text" name="email" value="" class="email required" /></label>
@@ -138,7 +141,7 @@
                     <label>owner: <select name="owner" class="required"></select></label>
                 </div>
                 <div class="control-group">
-                    <label>label: <input type="text" name="name" value="comment 1" class="required" /></label>
+                    <label>message: <input type="text" name="name" value="" class="required" /></label>
                 </div>
                 <button>add</button>
             </fieldset>
@@ -215,6 +218,6 @@
 <script type="text/javascript" src="assets/router.js"></script>
 <script type="text/javascript" src="assets/bindings.js"></script>
 <script type="text/javascript" src="assets/app.js"></script>
-
 </body>
 </html>
+

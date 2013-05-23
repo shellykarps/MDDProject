@@ -120,7 +120,7 @@
          this.addValidation();
          this.addDeleteTrigger('a', '.data-panel');
          this.updateInputTextOnAdd(this.$el.find('[name=name]'), 'user');
-         this.updateInputTextOnAdd(this.$el.find('[name=email]'), 'user', '@localhost.com');
+         this.updateInputTextOnAdd(this.$el.find('[name=email]'), 'user', '');
       }
    });
 

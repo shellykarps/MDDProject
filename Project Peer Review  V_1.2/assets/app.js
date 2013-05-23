@@ -35,7 +35,7 @@
 
    jQuery(function($) {
       $.bb.updateFooter();
-      BackboneFirebase.DEFAULT_INSTANCE = 'https://YOURINSTANCE.firebaseio.com/';
+      BackboneFirebase.DEFAULT_INSTANCE = 'https://project-peer-review.firebaseIO.com/';
       $.bb.Router.init(footerModel);
    });
 
