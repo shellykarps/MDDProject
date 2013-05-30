@@ -85,7 +85,7 @@
    });
 
    // Allows the default URL to be set globally (can still be overridden in options, too)
-   BackboneFirebase.DEFAULT_INSTANCE = 'http://YOURDB.firebaseio.com';
+   BackboneFirebase.DEFAULT_INSTANCE = 'https://project-peer-review.firebaseio.com/';
 
    BackboneFirebase.defaultEvents = {
       child_added: function(pushed_model) {
