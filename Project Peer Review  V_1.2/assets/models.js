@@ -14,8 +14,7 @@
          return _.omit(this.attributes, this.idAttribute, 'routeUrl');
       }
    });
-   
-
+ 
    M.User = ModelBase.extend({
       defaults: {
          'name': '',

@@ -4,11 +4,12 @@
    "use strict";
    $.bb || ($.bb = {}); // namespace
    var C = $.bb.lists = {};
-   
+
    C.Users = Backbone.Collection.extend({
       'model': $.bb.models.User,
       'url': "/users",
       'initialize': function() {
+		 
 		  //update count for number of users
          this.updateCount();
          this.backboneFirebase = new BackboneFirebase(this, {idAttribute: '_id', syncManager: BackboneFirebaseAutoSync});

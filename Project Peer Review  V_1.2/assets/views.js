@@ -106,17 +106,16 @@
       }
    });
 
-
-
    /** USERS
     ***********************/
 
    V.Users = ViewBase.extend({
       'collection': null,
       initialize: function(props) {
+		  
          $.bb.showMessage('Loading users from database', 'info', 2);
          this.collection = loadUsers();
-         this.applyDataBindings('data-panel-users', this.$el.find('.data-panel'), {email: { 'selector': '[data-name="email"]' }});
+        this.applyDataBindings('data-panel-users', this.$el.find('.data-panel'), {email: { 'selector': '[data-name="email"]' }});
          this.addValidation();
          this.addDeleteTrigger('a', '.data-panel');
          this.updateInputTextOnAdd(this.$el.find('[name=name]'), 'user');

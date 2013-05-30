@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>login</title>
+</head>
+
+<body>
+<script type='text/javascript'
+        src='https://cdn.firebase.com/v0/firebase-auth-client.js'>
+</script>
+<script>
+var chatRef = new Firebase("https://project-peer-review.firebaseio.com/");
+var authClient = new FirebaseAuthClient(chatRef, function(error, user) {
+  if (error) {
+    // an error occurred while attempting login
+    console.log(error);
+  } else if (user) {
+    // user authenticated with Firebase
+    console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+  } else {
+    // user is logged out
+  }
+});
+authClient.login('<provider>');
+authClient.logout();
+{
+  code: 'INVALID_PASSWORD',
+  message: 'The specified password is incorrect.'
+}
+var chatRef = new Firebase("https://project-peer-review.firebaseio.com/");
+var authClient = new FirebaseAuthClient(chatRef, function(error, user) {
+  if (error) {
+    // an error occurred while attempting login
+    switch(error.code) {
+      case 'INVALID_EMAIL':
+      case 'INVALID_PASSWORD':
+      default:
+    }
+  } else if (user) {
+    // user authenticated with Firebase
+    console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+  } else {
+    // user is logged out
+  }
+});
+</script>
+</body>
+</html>
